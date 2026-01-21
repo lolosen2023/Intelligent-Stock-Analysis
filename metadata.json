@@ -1,0 +1,5 @@
+{
+  "name": "智能股票分析助手",
+  "description": "An AI-powered H5 stock analysis tool offering deep technical and fundamental insights using real-time data search.",
+  "requestFramePermissions": []
+}

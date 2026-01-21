@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Smart Stock Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; 
+      }
+
+      /* Pattern Animations */
+      @keyframes draw-line {
+        from { stroke-dasharray: 100; stroke-dashoffset: 100; }
+        to { stroke-dasharray: 100; stroke-dashoffset: 0; }
+      }
+      
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes pulse-area {
+        0% { opacity: 0.1; }
+        50% { opacity: 0.3; }
+        100% { opacity: 0.1; }
+      }
+
+      .animate-draw {
+        animation: draw-line 1.5s ease-out forwards;
+      }
+
+      .animate-candle-1 { animation: fade-in-up 0.5s ease-out forwards; animation-delay: 0.1s; opacity: 0; }
+      .animate-candle-2 { animation: fade-in-up 0.5s ease-out forwards; animation-delay: 0.3s; opacity: 0; }
+      .animate-candle-3 { animation: fade-in-up 0.5s ease-out forwards; animation-delay: 0.5s; opacity: 0; }
+      .animate-candle-4 { animation: fade-in-up 0.5s ease-out forwards; animation-delay: 0.7s; opacity: 0; }
+      .animate-candle-5 { animation: fade-in-up 0.5s ease-out forwards; animation-delay: 0.9s; opacity: 0; }
+      
+      .animate-area {
+        animation: pulse-area 3s infinite ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lightweight-charts": "https://esm.sh/lightweight-charts@4.1.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-950 text-slate-200 antialiased overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
